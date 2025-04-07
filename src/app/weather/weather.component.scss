@@ -1,86 +1,99 @@
 .weather-app {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 480px;
+  margin: 60px auto;
+  padding: 30px;
+  background: linear-gradient(to bottom right, #e6f0ff, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
   text-align: center;
-  font-family: "Arial", sans-serif;
 }
 
 h1 {
-  color: #333;
+  color: #2c3e50;
+  font-size: 2rem;
   margin-bottom: 20px;
-  font-size: 28px;
 }
 
 form {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
 }
 
 form input {
-  flex-grow: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-right: 10px;
+  flex: 1 1 70%;
+  padding: 12px 14px;
+  border: 1px solid #d3dce6;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fefefe;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 form button {
+  flex: 1 1 28%;
   background-color: #007bff;
-  color: white;
+  color: #fff;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
   background-color: #0056b3;
+  transform: scale(1.03);
+}
+
+.loading,
+.error {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .loading {
-  margin-top: 20px;
   color: #007bff;
-  font-weight: bold;
-  font-size: 18px;
 }
 
 .error {
-  margin-top: 20px;
-  color: #e74c4c;
-  font-weight: bold;
-  font-size: 18px;
+  color: #e74c3c;
 }
 
 .weather-info {
   margin-top: 30px;
-  padding: 15px;
-  background-color: white;
-  border-radius: 8px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: left;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .weather-info h2 {
-  color: #333;
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  color: #2c3e50;
 }
 
 .weather-info p {
-  margin: 8px 0;
-  color: #555;
-  font-size: 18px;
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .emoji {
-  font-size: 2em;
-  margin-left: 8px;
+  font-size: 1.5em;
+  margin-left: 10px;
 }
